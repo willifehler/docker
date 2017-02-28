@@ -1,7 +1,7 @@
 <?php
 $CONFIG = array (
   'instanceid' => 'ocifrt5u2sjm',
-  'overwritehost'     => 'willi-net.ddns.net',
+  'overwritehost'     => 'nextcloudwilli-net.ddns.net',
   'overwriteprotocol' => 'https',
-  'overwritewebroot'  => '/nextcloud',
+  'overwritewebroot'  => '/',
 );
