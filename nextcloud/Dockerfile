@@ -19,8 +19,10 @@ RUN curl -fsSL -o nextcloud-11.0.1.tar.bz2 https://download.nextcloud.com/server
   && tar xfj nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 --strip 1 -C /var/www/html/
 
 COPY httpd.conf /etc/httpd/conf/httpd.conf
+COPY security.conf /etc/httpd/conf.d/
 COPY config.php /var/www/html/config/
 RUN chown -R apache:apache /var/www/html/
+RUN sed -i 's/expose_php = On/expose_php = Off/' /etc/php.ini
 
 EXPOSE 80
 
