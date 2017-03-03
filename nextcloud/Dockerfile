@@ -13,7 +13,6 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm && yum -y in
   php71u-mysqlnd
 
 ENV NEXTCLOUD_VERSION 11.0.2
-#VOLUME /var/www/html
 
 RUN curl -fsSL -o nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 \
   && tar xfj nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 --strip 1 -C /var/www/html/
